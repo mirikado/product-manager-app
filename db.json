@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Coca",
+      "price": 10000,
+      "image": ""
+    },
+    {
+      "id": "2",
+      "name": "Pepsi",
+      "price": 12000,
+      "image": ""
+    },
+    {
+      "id": "pm6hrVeR_wo",
+      "name": "1",
+      "price": 1,
+      "image": null
+    },
+    {
+      "id": "p9SQ5YMuF0I",
+      "name": "2",
+      "price": 2,
+      "image": null
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
