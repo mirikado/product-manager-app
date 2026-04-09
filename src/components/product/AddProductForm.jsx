@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
+import ImageUpload from "../common/ImageUpload";
 
 function AddProductForm({ onAddProduct, loading }) {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState(null);
+  const [resetKey, setResetKey] = useState(0);
 
-  const handleImage = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-
+  const handleImage = (file) => {
     const reader = new FileReader();
 
     reader.onloadend = () => {
@@ -42,6 +41,7 @@ function AddProductForm({ onAddProduct, loading }) {
     setName("");
     setPrice("");
     setImage(null);
+    setResetKey((prev) => prev + 1);
   };
 
   return (
@@ -62,15 +62,7 @@ function AddProductForm({ onAddProduct, loading }) {
         className="w-full border rounded-xl px-3 py-2"
       />
 
-      <input
-        type="file"
-        accept="image/*"
-        capture="environment"
-        onChange={handleImage}
-        className="text-sm"
-      />
-
-      {image && <img src={image} width={80} height={80} style={{ borderRadius: 8, objectFit: "cover" }} />}
+      <ImageUpload key={resetKey} onChange={handleImage}></ImageUpload>
 
       <button disabled={loading} className="w-full bg-blue-500 text-white py-2 rounded-xl" onClick={handleAddProduct}>Thêm</button>
     </div>
