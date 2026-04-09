@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { ProductList, AddProductForm } from "./components";
 import { useToast } from "./ToastContext";
 import SkeletonItem from "./Skeleton";
-import { createProduct, deleteProductApi, getProducts, updateProduct } from "./api/api";
+import { createProduct, deleteProductApi, getProducts, updateProduct } from "./services/productService";
 
 function App() {
   const [products, setProducts] = useState(() => {
