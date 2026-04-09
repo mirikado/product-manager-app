@@ -10,6 +10,7 @@
 - Upload image
 - Toast notification
 - Responsive UI
+- Fake Login Logout
 
 ## Tech
 - React + Vite
