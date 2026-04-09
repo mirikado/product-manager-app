@@ -4,7 +4,7 @@ import { useToast } from "./ToastContext";
 import SkeletonItem from "./Skeleton";
 import { createProduct, deleteProductApi, getProducts, updateProduct } from "./services/productService";
 import { useAuth } from "./context/AuthContext";
-import ProtectedApp from "./components/auth/protectedApp";
+import ProtectedApp from "./components/auth/ProtectedApp";
 
 function App() {
 
